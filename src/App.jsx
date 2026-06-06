@@ -1,11 +1,18 @@
+// /src/App.jsx
+
 import './App.css'
 
-import AllPages from './pages/AllPages'
+import AppRouter from './routes/AppRouter';
 
+import { Provider } from 'react-redux';
+
+import {store} from './app/store'
 
 function App() {
   return (
-    <AllPages />
+    <Provider store={store}>
+      <AppRouter />
+    </Provider>
   )
 }
 
